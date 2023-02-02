@@ -1,16 +1,26 @@
-<!DOCTYPE>
+<!DOCTYPE >
 <html>
+  <head>
+    <title>VueJS Course</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
 
-<head>
-  <title>VueJS Course</title>
-  <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
+  <body>
+    <div id="app">
+      <p v-if="mode==1">Rendering the data as the condition is true.</p>
+      <p v-else-if="mode==2">
+        Rendering the data v-else-if which evaluates to either true or false.
+      </p>
+      <p v-else>Rendering the data using v-else as the conditions are false.</p>
 
-<body>
-  <div id="app"></div>
+      <select v-model="mode">
+        <option value="1">v-if</option>
+        <option value="2">v-else-if</option>
+        <option value="3">v-else</option>
+      </select>
+    </div>
 
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="app.js"></script>
-</body>
-
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
